@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personas Favoritas</title>
+    <style>
+        .persona {
+            font-size: large;
+            text-align: center;
+            border: black solid;
+            background: linear-gradient(#e5dcff, #dfe1ff);
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    const personasFavoritas = [
+        { nombre: "Afrojack", profesion: "DJ" },
+        { nombre: "Alok", profesion: "DJ" },
+        { nombre: "Dimitri Vegas & Like Mike", profesion: "DJ" },
+        { nombre: "MArtin Garrix", profesion: "DJ" },
+        { nombre: "Banksy", profesion: "DJ" },
+        { nombre: "Amber Broos", profesion: "CantaDJnte" },
+        { nombre: "Don Diablo", profesion: "DJ" },
+        { nombre: "Taylor Swift", profesion: "DJ" },
+        { nombre: "Steve Aoki", profesion: "DJ" },
+        { nombre: "Williams", profesion: "DJ" }
+    ];
+
+    const contenedor = document.getElementById('contenedor');
+
+    personasFavoritas.forEach(personitas => {
+        const div = document.createElement('div');
+        div.className = 'persona';
+        div.innerHTML = `<strong>Nombre:</strong> ${personitas.nombre} <br> <strong>Profesión:</strong> ${personitas.profesion} `;
+        contenedor.appendChild(div);
+    });
+</script>
